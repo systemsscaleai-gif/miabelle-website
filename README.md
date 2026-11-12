@@ -2,15 +2,25 @@
 
 Handmade crochet & clay-bead jewelry by Mia in Logan, Utah.
 
-Single self-contained page: `index.html` + `assets/` (images + video). No build step.
+**Live site: https://littlemissmiabelle.com/**
 
-## Live site
+## What's in here
 
-**https://systemsscaleai-gif.github.io/miabelle-website/**
+- `index.html` – the whole page (built in Hyperagent; styles and scripts are inline)
+- `assets/` – photos, logos and icons
+- `robots.txt`, `sitemap.xml`, `404.html` – housekeeping files for search engines and broken links
 
-Deploys automatically from `main` via GitHub Actions (`.github/workflows/deploy.yml`).
-On the first run the workflow vendors the image/video assets into `assets/` and commits them;
-after that the repo is fully self-contained.
+There is no build step. Any change pushed to `main` is published automatically by
+GitHub Actions (`.github/workflows/deploy-pages.yml`) to GitHub Pages, which serves the custom domain.
+
+## Notes
+
+- **Reviews** – the Hyperagent export only had sample reviews, so that section is left out.
+  When there are real customer quotes, restore the section from git history and swap them in.
+- **Hero video** – the export pointed at a login-only Hyperagent link, so the hero uses its
+  floral background. To bring the video back, add `assets/hero.mp4` and restore the `<video>` tag.
+- **Earlier 18-design draft** – kept on the `v18-draft` branch. It needs 17 photos and the video
+  that only exist inside the Hyperagent account.
 
 ## Local preview
 
